@@ -3,7 +3,10 @@ import React from "react";
 export default class Result extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      // potential need to keep track of pages
+      page: null
+    };
   }
 
   render() {

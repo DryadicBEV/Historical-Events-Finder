@@ -7,7 +7,7 @@ const NavButton = props => {
   if (props.increment) {
     if (props.display) {
       return (
-        <button className="nav-button" onClick={props.handleClick}>
+        <button className="button" onClick={props.handleClick}>
           Next Page
         </button>
       );
@@ -16,7 +16,7 @@ const NavButton = props => {
     }
   } else {
     return (
-      <button className="nav-button" onClick={props.handleClick}>
+      <button className="button" onClick={props.handleClick}>
         Previous Page
       </button>
     );

@@ -10,7 +10,7 @@ const Event = ({ date, description, lang, category1, category2 }) => {
         <b>Description:</b> {description}
       </p>
       <p>
-        <v>Language:</v> {lang}
+        <b>Language:</b> {lang}
       </p>
       <p>
         <b>Category1:</b> {category1}

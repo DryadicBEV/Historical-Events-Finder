@@ -1,8 +1,8 @@
-import axios from 'axios';
+import axios from "axios";
 
-const getEvents = (term, page) => {
+const getEvents = (term, page = 1) => {
   return axios
-    .get('/events', {
+    .get("/events", {
       params: {
         _page: page,
         _limit: 10,

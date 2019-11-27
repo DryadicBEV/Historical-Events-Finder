@@ -11,9 +11,9 @@ const Event = ({ date, description }) => {
         <b>Date:</b>{" "}
         {date[0] === "-" ? date.slice(1) + " B.C." : date + " A.D."}
       </p>
-      <p>
+      <div>
         <b>Description:</b> {description}
-      </p>
+      </div>
     </div>
   );
 };

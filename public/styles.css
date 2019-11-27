@@ -32,6 +32,10 @@ html {
   margin: 3%;
 }
 
+.event div {
+  overflow: scroll;
+}
+
 .card {
   box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.2);
   transition: 0.3s;

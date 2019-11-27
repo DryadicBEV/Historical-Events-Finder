@@ -28,10 +28,11 @@ export default class Search extends React.Component {
         <h2>Search</h2>
         <form>
           <input
+            className="search-bar"
             placeholder="Search"
             onChange={e => this.handleChange(e.target.value)}
           />
-          <button type="submit" onClick={this.handleClick}>
+          <button className="button" type="submit" onClick={this.handleClick}>
             Search
           </button>
         </form>

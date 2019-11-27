@@ -8,20 +8,41 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       currentQuery: '',
-      results: []
+      results: [],
+      page: 1
     };
 
     this.search = this.search.bind(this);
+    this.handlePageIncrement = this.handlePageIncrement.bind(this);
+    this.handlePageDecrement = this.handlePageDecrement.bind(this);
   }
 
   search(query, page = 1) {
+    const previousQuery = this.state.currentQuery;
+
     getEvents(query, page)
       .then(results => {
-        this.setState({ results });
+        if (query !== previousQuery) {
+          this.setState({ page: 1, currentQuery: query, results });
+        } else {
+          this.setState({ results, currentQuery: query });
+        }
       })
       .catch(err => {
         console.log('Error ', err);
       });
+  }
+
+  handlePageIncrement() {
+    this.setState({ page: this.state.page + 1 }, () => {
+      this.search(this.state.currentQuery, this.state.page);
+    });
+  }
+
+  handlePageDecrement() {
+    this.setState({ page: this.state.page - 1 }, () => {
+      this.search(this.state.currentQuery, this.state.page);
+    });
   }
 
   render() {
@@ -36,6 +57,9 @@ export default class App extends React.Component {
             search={this.search}
             currentQuery={this.state.currentQuery}
             results={this.state.results}
+            page={this.state.page}
+            handlePageDecrement={this.handlePageDecrement}
+            handlePageIncrement={this.handlePageIncrement}
           />
         </div>
       </div>

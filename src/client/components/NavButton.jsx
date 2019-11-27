@@ -1,13 +1,25 @@
-import React from 'react';
+import React from "react";
 
 const NavButton = props => {
   if (props.page === 1) {
-    return <div></div>;
+    return <></>;
   }
   if (props.increment) {
-    return <button onClick={props.handleClick}>Next Page</button>;
+    if (props.display) {
+      return (
+        <button className="nav-button" onClick={props.handleClick}>
+          Next Page
+        </button>
+      );
+    } else {
+      return <></>;
+    }
   } else {
-    return <button onClick={props.handleClick}>Previous Page</button>;
+    return (
+      <button className="nav-button" onClick={props.handleClick}>
+        Previous Page
+      </button>
+    );
   }
 };
 

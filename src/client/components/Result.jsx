@@ -1,11 +1,10 @@
-import React from 'react';
-import NavButton from './NavButton.jsx';
+import React from "react";
+import NavButton from "./NavButton.jsx";
 
 export default class Result extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // potential need to keep track of pages
       page: 1
     };
 

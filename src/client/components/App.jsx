@@ -27,7 +27,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>APP</h1>
+        <h1>Historical Events Finder</h1>
         <div>
           <Search search={this.search} />
         </div>

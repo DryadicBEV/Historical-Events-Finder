@@ -1,13 +1,13 @@
-import React from "react";
-import Result from "./Result.jsx";
-import Search from "./Search.jsx";
-import getEvents from "../helpers.js";
+import React from 'react';
+import Result from './Result.jsx';
+import Search from './Search.jsx';
+import getEvents from '../helpers.js';
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentQuery: "",
+      currentQuery: '',
       results: []
     };
 
@@ -20,7 +20,7 @@ export default class App extends React.Component {
         this.setState({ results });
       })
       .catch(err => {
-        console.log("Error ", err);
+        console.log('Error ', err);
       });
   }
 
@@ -28,7 +28,7 @@ export default class App extends React.Component {
     return (
       <div id="app-container">
         <h1>Historical Events Finder</h1>
-        <div id="search-container">
+        <div id="search-container" className="card">
           <Search search={this.search} />
         </div>
         <div id="result-container">

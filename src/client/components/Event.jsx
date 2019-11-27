@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 const Event = ({ date, description, lang, category1, category2 }) => {
   return (
-    <div className="event">
+    <div className="event card">
       <p>
         <b>Date:</b> {date}
       </p>

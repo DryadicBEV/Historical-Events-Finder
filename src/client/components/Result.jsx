@@ -1,5 +1,6 @@
 import React from "react";
 import NavButton from "./NavButton.jsx";
+import Event from "./Event.jsx";
 
 export default class Result extends React.Component {
   constructor(props) {
@@ -29,7 +30,14 @@ export default class Result extends React.Component {
       <div>
         <h2>Result Component</h2>
         {this.props.results.map((result, idx) => (
-          <div key={idx}>{JSON.stringify(result)}</div>
+          <Event
+            key={idx}
+            date={result.date}
+            description={result.description}
+            lang={result.lang}
+            category1={result.category1}
+            category2={result.category2}
+          />
         ))}
         <NavButton
           handleClick={this.handlePageDecrement}

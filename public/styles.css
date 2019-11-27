@@ -2,16 +2,34 @@ html {
   font-family: sans-serif;
 }
 
+#app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
 #search-container {
   width: 60%;
-  border: solid;
+  margin: 3%;
+  border: 1px solid black;
   align-self: center;
   text-align: center;
   padding: 2em;
 }
 
+#events-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
 .event {
+  width: 80%;
   border: 1px solid black;
+  align-self: center;
   padding: 3%;
   margin: 3%;
 }

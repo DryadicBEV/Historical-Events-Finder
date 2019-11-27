@@ -17,7 +17,6 @@ export default class Search extends React.Component {
 
   handleClick(e) {
     e.preventDefault();
-    console.log("clicked");
     if (this.state.query !== "") {
       this.props.search(this.state.query);
     }
@@ -26,7 +25,7 @@ export default class Search extends React.Component {
   render() {
     return (
       <div>
-        <h2>Search Component</h2>
+        <h2>Search</h2>
         <form>
           <input
             placeholder="Search"

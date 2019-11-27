@@ -26,7 +26,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="app-container">
         <h1>Historical Events Finder</h1>
         <div id="search-container">
           <Search search={this.search} />

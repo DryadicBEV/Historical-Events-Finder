@@ -29,6 +29,9 @@ export default class Result extends React.Component {
     return (
       <div>
         <h2>Result Component</h2>
+        {this.props.results.map((result, idx) => (
+          <div key={idx}>{JSON.stringify(result)}</div>
+        ))}
         <NavButton handleClick={this.handlePageDecrement} />
         <NavButton increment={true} handleClick={this.handlePageIncrement} />
       </div>

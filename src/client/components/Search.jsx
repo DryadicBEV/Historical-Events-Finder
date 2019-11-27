@@ -18,6 +18,9 @@ export default class Search extends React.Component {
   handleClick(e) {
     e.preventDefault();
     console.log("clicked");
+    if (this.state.query !== "") {
+      this.props.search(this.state.query);
+    }
   }
 
   render() {

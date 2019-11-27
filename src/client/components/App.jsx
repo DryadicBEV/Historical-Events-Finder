@@ -28,10 +28,10 @@ export default class App extends React.Component {
     return (
       <div>
         <h1>Historical Events Finder</h1>
-        <div>
+        <div id="search-container">
           <Search search={this.search} />
         </div>
-        <div>
+        <div id="result-container">
           <Result
             search={this.search}
             currentQuery={this.state.currentQuery}

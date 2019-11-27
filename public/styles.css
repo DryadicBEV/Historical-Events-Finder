@@ -1,0 +1,11 @@
+html {
+  font-family: sans-serif;
+}
+
+#search-container {
+  width: 60%;
+  border: solid;
+  align-self: center;
+  text-align: center;
+  padding: 2em;
+}

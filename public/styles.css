@@ -12,7 +12,6 @@ html {
 #search-container {
   width: 60%;
   margin: 3%;
-  border: 1px solid black;
   align-self: center;
   text-align: center;
   padding: 2em;
@@ -28,13 +27,12 @@ html {
 
 .event {
   width: 60%;
-  border: 1px solid black;
   align-self: center;
   padding: 3%;
   margin: 3%;
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.2);
   transition: 0.3s;
 }

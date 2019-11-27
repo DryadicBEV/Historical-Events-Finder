@@ -32,7 +32,10 @@ export default class Result extends React.Component {
         {this.props.results.map((result, idx) => (
           <div key={idx}>{JSON.stringify(result)}</div>
         ))}
-        <NavButton handleClick={this.handlePageDecrement} />
+        <NavButton
+          handleClick={this.handlePageDecrement}
+          page={this.state.page}
+        />
         <NavButton increment={true} handleClick={this.handlePageIncrement} />
       </div>
     );
